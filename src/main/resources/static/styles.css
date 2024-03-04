@@ -1,0 +1,71 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fd4d4d;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+nav button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Выравнивание книг слева */
+    gap: 20px;
+    padding: 20px;
+}
+
+.book {
+    text-align: center;
+    width: calc(50% - 20px); /* Каждая книга будет занимать половину контейнера с учетом промежутков */
+    margin-bottom: 20px;
+}
+
+.book img {
+    width: 100%; /* Чтобы изображение занимало всю доступную ширину */
+    height: auto; /* Автоматическая высота для поддержки соотношения сторон */
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #ff7700;
+    color: #fff;
+    padding: 20px;
+}

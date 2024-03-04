@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian's Book</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Добавленные стили для секции книг */
+        #featured-books {
+            display: flex; /* Отображаем книги в строку */
+            flex-wrap: wrap; /* Переносим книги на новую строку при необходимости */
+            justify-content: space-between; /* Равномерно распределяем пространство между книгами */
+            padding: 20px; /* Добавляем отступы */
+        }
+
+        /* Добавленные стили для каждой книги */
+        .book {
+            width: calc(50% - 20px); /* Каждая книга будет занимать половину контейнера с учетом промежутков */
+            margin-bottom: 20px; /* Добавляем отступ снизу для создания промежутков между книгами */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Christian's Book</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li>
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+            </li>
+            <li><a href="#">My Account</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section id="featured-books">
+        <h2>Featured Books</h2>
+        <div class="book">
+            <img src="/images/kant_1.jpg" alt="Кант: Критика чистого разума">
+            <h3>Эмануэль Кант</h3>
+            <p>Кант: Критика чистого разума</p>
+        </div>
+        <div class="book">
+            <img src="/images/Dekart_2.jpg" alt="Dekart_2">
+            <h3>Рене Декарт</h3>
+            <p>Декарт: Размышления о первой философии</p>
+        </div>
+        <!-- Добавьте еще книги здесь -->
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Christian's Book. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
