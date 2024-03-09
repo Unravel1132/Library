@@ -1,3 +1,5 @@
+package com.Library.Library.Security;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -37,16 +39,5 @@ public class SecurityConfig {
         return new InMemoryUserDetailsManager(List.of(user, admin));
     }
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        HttpBasicConfigurer<HttpSecurity> httpSecurityHttpBasicConfigurer = http.csrf().disable()
-                .authorizeRequests(authorize -> authorize
-                        .antMatchers(HttpMethod.DELETE, "/admin/**").hasRole("ADMIN")
-                        .antMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-                        .antMatchers("/login/**").permitAll()
-                        .anyRequest().authenticated())
-                .httpBasic();
 
-        return http.build();
-    }
 }
